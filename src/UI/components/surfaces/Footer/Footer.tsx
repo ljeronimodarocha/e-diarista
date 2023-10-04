@@ -1,9 +1,13 @@
 import { Box, List, Typography } from "@mui/material";
 import {
+  AppList,
   FooterContainer,
   FooterGrid,
   FooterListItem,
+  FooterSocialList,
   FooterTitle,
+  SocialButton,
+  SocialContainer,
 } from "./Footer.style";
 import Link from "UI/components/navigation/link/Link";
 
@@ -51,7 +55,45 @@ const Footer = () => {
             satisfeitos por todo o país.
           </Typography>
         </Box>
-        <FooterTitle>Baixa nossos aplicativos</FooterTitle>
+        <SocialContainer>
+          <div>
+            <FooterTitle>Baixa nossos aplicativos</FooterTitle>
+            <AppList>
+              <li>
+                <a href="" target="_blank" rel={"noopener noreferrer"}>
+                  <img src="/img/logos/app-store.png" alt="AppStore" />
+                </a>
+              </li>
+              <li>
+                <a href="" target="_blank" rel={"noopener noreferrer"}>
+                  <img src="/img/logos/google-play.png" alt="Google Play" />
+                </a>
+              </li>
+            </AppList>
+          </div>
+          <div>
+            <FooterTitle>Redes Sociais</FooterTitle>
+            <FooterTitle>
+              <FooterSocialList>
+                <FooterListItem>
+                  <SocialButton href="/">
+                    <i className="twf-facebook-f" />
+                  </SocialButton>
+                </FooterListItem>
+                <FooterListItem>
+                  <SocialButton href="/">
+                    <i className="twf-instagram" />
+                  </SocialButton>
+                </FooterListItem>
+                <FooterListItem>
+                  <SocialButton href="/">
+                    <i className="twf-youtube" />
+                  </SocialButton>
+                </FooterListItem>
+              </FooterSocialList>
+            </FooterTitle>
+          </div>
+        </SocialContainer>
       </FooterGrid>
     </FooterContainer>
   );

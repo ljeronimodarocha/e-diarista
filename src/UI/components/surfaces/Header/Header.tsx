@@ -12,8 +12,8 @@ import {
   HeaderDrawer,
   HeaderLogo,
 } from "./Header.styles";
-import Link from "../navigation/link/Link";
-import RountedButton from "../inputs/RoundedButton/RountedButton";
+import Link from "../../navigation/link/Link";
+import RountedButton from "../../inputs/RoundedButton/RountedButton";
 import { useState } from "react";
 import useIsMobile from "data/hooks/useIsMobile";
 
