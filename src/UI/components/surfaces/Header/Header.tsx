@@ -39,7 +39,9 @@ const HeaderDesktop: React.FC = () => {
           >
             Seja um(a) diarista
           </Link>
-          <Link href="/login">Login</Link>
+          <Link Component={RountedButton} href="/login">
+            Login
+          </Link>
         </ButtonContainer>
       </Toolbar>
     </HeaderAppBar>
