@@ -7,7 +7,7 @@ import {
 import { PropsWithChildren } from "react";
 import Router from "next/router";
 
-interface LinkProps {
+export interface LinkProps {
   href: string;
   mui?: MuiLinkProps | ButtonProps;
   next?: NextLinkProps;
