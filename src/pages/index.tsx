@@ -1,8 +1,6 @@
-import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
-import Image from "next/image";
-import styles from "../UI/styles/Home.module.css";
+import Advantages from "@patials/index/_advantages";
 import Presentation from "@patials/index/_presentaion";
+import type { GetStaticProps, NextPage } from "next";
 //parei modulo 9 aula 12, começar a 13
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -17,6 +15,7 @@ const Index: NextPage<{ title: string }> = (props) => {
   return (
     <div>
       <Presentation />
+      <Advantages />
     </div>
   );
 };

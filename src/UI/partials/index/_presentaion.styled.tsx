@@ -106,7 +106,6 @@ export const SectionButton = styled((props: PropsWithChildren<LinkProps>) => (
     height: 60px;
   }
 `;
-
 export const SectionPictureContainer = styled("div")`
   grid-area: picture;
   position: relative;
@@ -140,5 +139,22 @@ export const SectionPictureContainer = styled("div")`
     width: 40px;
     height: 40px;
     background-color: ${({ theme }) => theme.palette.grey[200]};
+  }
+`;
+
+export const BottomButton = styled("span")`
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: ${({ theme }) => theme.palette.secondary.main};
+  padding: 11px 12px;
+  border-radius: 50px;
+  color: ${({ theme }) => theme.palette.common.white};
+  border: 5px solid currentColor;
+
+  i {
+    position: relative;
+    left: -2px;
   }
 `;
