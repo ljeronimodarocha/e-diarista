@@ -1,4 +1,4 @@
-import { styled } from "@mui/material";
+import { Avatar, List, ListItemText, styled } from "@mui/material";
 
 export const GradientBackground = styled("section")`
   padding-bottom: ${({ theme }) => theme.spacing(20)};
@@ -31,6 +31,42 @@ export const SectionTitle = styled("h2")`
 
     &::after {
       bottom: ${({ theme }) => theme.spacing(10)};
+    }
+  }
+`;
+export const ListStyle = styled(List)`
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: ${({ theme }) => theme.spacing(7)};
+  }
+`;
+
+export const AvatarStyled = styled(Avatar)`
+  background-color: transparent;
+  border: 2px solid currentColor;
+  margin-right: ${({ theme }) => theme.spacing(2)};
+  box-sizing: content-box;
+
+  i {
+    font-size: 25px;
+  }
+
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    padding: ${({ theme }) => theme.spacing(2)};
+    margin-right: ${({ theme }) => theme.spacing(4)};
+    i {
+      font-size: 50px;
+    }
+  }
+`;
+
+export const ListItemTextStyled = styled(ListItemText)`
+  MuiListItemText-primary {
+    font-weight: bold;
+
+    .MuiListItemText-secondary {
+      color: currentColor;
     }
   }
 `;
