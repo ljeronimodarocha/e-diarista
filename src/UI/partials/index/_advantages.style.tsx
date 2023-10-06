@@ -1,4 +1,4 @@
-import { Avatar, List, ListItemText, styled } from "@mui/material";
+import { Avatar, Divider, List, ListItemText, styled } from "@mui/material";
 
 export const GradientBackground = styled("section")`
   padding-bottom: ${({ theme }) => theme.spacing(20)};
@@ -62,11 +62,20 @@ export const AvatarStyled = styled(Avatar)`
 `;
 
 export const ListItemTextStyled = styled(ListItemText)`
-  MuiListItemText-primary {
+  .MuiListItemText-primary {
     font-weight: bold;
+  }
 
-    .MuiListItemText-secondary {
-      color: currentColor;
-    }
+  .MuiListItemText-secondary {
+    color: currentColor;
+  }
+`;
+
+export const ListDivider = styled(Divider)`
+  &.MuiDivider-root {
+    border-color: rgba(255, 255, 255, 0.25);
+  }
+  ${({ theme }) => theme.breakpoints.up("md")} {
+    display: none;
   }
 `;
