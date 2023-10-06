@@ -4,6 +4,7 @@ import Link, { LinkProps } from "UI/components/navigation/link/Link";
 import { PropsWithChildren } from "react";
 
 export const SectionContainer = styled("section")`
+  position: relative;
   min-height: 250px;
   background-image: url("/img/home/living-room.svg");
   background-repeat: no-repeat;
@@ -23,7 +24,10 @@ export const SectionContainer = styled("section")`
 export const ContainerStyled = styled(Container)`
   display: grid;
   grid-template-rows: repeat(3, auto);
-  grid-template-areas: "title" "subtitle" "button";
+  grid-template-areas:
+    "title"
+    "subtitle"
+    "button";
   align-content: center;
 
   ${({ theme }) => theme.breakpoints.up("md")} {
@@ -43,6 +47,7 @@ export const ContainerStyled = styled(Container)`
     max-width: 350px;
   }
 `;
+
 export const SectionTitle = styled("h1")`
   grid-area: title;
   margin: 0;
@@ -99,5 +104,41 @@ export const SectionButton = styled((props: PropsWithChildren<LinkProps>) => (
   ${({ theme }) => theme.breakpoints.up("md")} {
     width: 405px;
     height: 60px;
+  }
+`;
+
+export const SectionPictureContainer = styled("div")`
+  grid-area: picture;
+  position: relative;
+
+  img {
+    position: relative;
+    top: 35px;
+    width: 100%;
+  }
+  ${({ theme }) => theme.breakpoints.down("md")} {
+    display: none;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+  }
+  &::before {
+    top: 20%;
+    right: -5%;
+    width: 130px;
+    height: 130px;
+    background-color: ${({ theme }) => theme.palette.primary.main};
+    z-index: 2;
+  }
+  &::after {
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-color: ${({ theme }) => theme.palette.grey[200]};
   }
 `;
