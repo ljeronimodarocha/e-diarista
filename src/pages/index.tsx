@@ -1,5 +1,6 @@
 import Advantages from "@patials/index/_advantages";
 import Presentation from "@patials/index/_presentaion";
+import FrequestQuestion from "@patials/index/__frequent-question";
 import type { GetStaticProps, NextPage } from "next";
 //parei modulo 9 aula 12, começar a 13
 
@@ -16,6 +17,7 @@ const Index: NextPage<{ title: string }> = (props) => {
     <div>
       <Presentation />
       <Advantages />
+      <FrequestQuestion />
     </div>
   );
 };
